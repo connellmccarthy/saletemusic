@@ -9,15 +9,3 @@ const looper = function () {
 	requestAnimationFrame(looper);
 }
 looper();
-
-// Mouse
-
-$(document).mousemove(function(e) {
-    $('.cursor').eq(0).css({ left: e.pageX, top: e.pageY });
-});
-$('a').mouseenter(function() {
-	$('.cursor').css('transform','translate(-50%,-50%) scale(5)');
-});
-$('a').mouseleave(function() {
-	$('.cursor').css('transform','translate(-50%,-50%) scale(1)');
-});

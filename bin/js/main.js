@@ -21,6 +21,23 @@ $(document).ready(function() {
  			window.location = direct;
  		},500);
  	});
+
+ 	// Mouse
+	$(document).mousemove(function(e) {
+	    $('.cursor').eq(0).css({ left: e.pageX, top: e.pageY });
+	});
+	$('a').mouseenter(function() {
+		$('.cursor').css({
+			transform: 'translate(-50%,-50%) scale(3)',
+			background: '#fff'
+		});
+	});
+	$('a').mouseleave(function() {
+		$('.cursor').css({
+			transform: 'translate(-50%,-50%) scale(1)',
+			background: 'transparent'
+		});
+	});
 });
 
 function load() {
