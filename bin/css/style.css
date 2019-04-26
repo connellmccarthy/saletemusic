@@ -449,6 +449,9 @@ li.track canvas {
 	border-bottom:2px solid rgba(255,0,0,.9);
 }
 @media only screen and (max-width: 890px) {
+	html,body {
+		overflow-x: hidden;
+	}
 	.cursor {
 		display: none;
 	}
@@ -460,7 +463,8 @@ li.track canvas {
 	}
 	li.track canvas {
 		display: block !important;
-		height:600px;
+		height: 500px;
+    	top: 50px;
 	}
 	li.track p.track-name {
 		font-size:3em;
@@ -482,6 +486,7 @@ li.track canvas {
 		margin-bottom:25px;
 	}
 	.section.press h1 {
+		font-size:2.4em;
 		width:100%;
 	}
 	.section.press p {
