@@ -26,19 +26,27 @@ $(document).ready(function() {
 	$(document).mousemove(function(e) {
 	    $('.cursor').eq(0).css({ left: e.pageX, top: e.pageY });
 	});
-	$('a').mouseenter(function() {
+	$('a,.btn,.shopify-buy-frame').mouseenter(function() {
+		cur_hover('enter');
+	});
+	$('a,.btn,.shopify-buy-frame').mouseleave(function() {
+		cur_hover('exit');
+	});
+});
+
+function cur_hover(e) {
+	if (e=="enter") {
 		$('.cursor').css({
 			transform: 'translate(-50%,-50%) scale(3)',
 			background: '#fff'
 		});
-	});
-	$('a').mouseleave(function() {
+	} else {
 		$('.cursor').css({
 			transform: 'translate(-50%,-50%) scale(1)',
 			background: 'transparent'
 		});
-	});
-});
+	}
+}
 
 function load() {
 	$('.loader-bar').css('width','100%');

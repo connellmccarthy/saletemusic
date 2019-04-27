@@ -8,6 +8,20 @@
 ::selection {
 	background:rgba(255,0,0,.9);
 }
+.clearfix {
+	overflow:auto;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+hr {
+	width: 100%;
+    border: none;
+    border-top: 1px dotted #fff;
+    margin-bottom:30px;
+}
 a.disabled {
 	cursor: not-allowed;
 }
@@ -148,6 +162,7 @@ h3 {
 	margin:0;
 	margin-top:10px;
 	padding:0;
+	margin-right:30px;
 }
 .top-nav p a {
 	color:inherit;
@@ -449,6 +464,36 @@ li.track canvas {
 .footer .nav-links a:hover {
 	border-bottom:2px solid rgba(255,0,0,.9);
 }
+
+/*Apparel*/
+.apparel-item {
+	margin-bottom:30px;
+}
+.apparel-item .photos {
+	width:50%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.photos.right {
+	padding-left:40px;
+	float:right;
+}
+.photos.left {
+	padding-right:40px;
+	float:left;
+}
+.apparel-item .product-info {
+	width:50%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.apparel-item .product-info p.price {
+	font-size:.8em;
+	color:rgba(255,255,255,.3);
+}
+
+
+
 @media only screen and (max-width: 890px) {
 	html,body {
 		overflow-x: hidden;
@@ -492,5 +537,15 @@ li.track canvas {
 	}
 	.section.press p {
 		width:100%;
+	}
+	.apparel-item .photos {
+		float:unset;
+		width:100%;
+		padding:0;
+	}
+	.apparel-item .product-info {
+		width:100%;
+		padding:0;
+		position: unset;
 	}
 }
