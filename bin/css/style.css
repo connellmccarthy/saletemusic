@@ -141,6 +141,7 @@ h3 {
 	box-sizing: border-box;
 	height:80px;
 	margin-bottom:15px;
+	border-bottom:1px dotted #fff;
 }
 .top-nav p {
 	float:left;
