@@ -20,7 +20,7 @@ hr {
 	width: 100%;
     border: none;
     border-top: 1px dotted #fff;
-    margin-bottom:30px;
+    margin-bottom:90px;
 }
 a.disabled {
 	cursor: not-allowed;
@@ -467,7 +467,7 @@ li.track canvas {
 
 /*Apparel*/
 .apparel-item {
-	margin-bottom:30px;
+	margin-bottom:90px;
 }
 .apparel-item .photos {
 	width:50%;
@@ -497,6 +497,9 @@ li.track canvas {
 @media only screen and (max-width: 890px) {
 	html,body {
 		overflow-x: hidden;
+	}
+	hr {
+		margin-bottom:45px;
 	}
 	.cursor {
 		display: none;
@@ -537,6 +540,9 @@ li.track canvas {
 	}
 	.section.press p {
 		width:100%;
+	}
+	.apparel-item {
+		margin-bottom:45px;
 	}
 	.apparel-item .photos {
 		float:unset;
