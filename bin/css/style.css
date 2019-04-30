@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,800');
 @font-face {
   font-family: 'Druk Wide';
   src: url('/fonts/DrukWide-Bold-Web.woff2') format('woff2');
@@ -9,7 +9,7 @@
 	background:rgba(255,0,0,.9);
 }
 .clearfix {
-	overflow:auto;
+	overflow:inherit;
 }
 .clearfix::after {
 	content: "";
@@ -31,6 +31,17 @@ a {
 	-ms-transition:.2s ease-in-out;
 	-moz-transition:.2s ease-in-out;
 	-webkit-transition:.2s ease-in-out;
+}
+a.btn {
+	font-size:.9em;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    border-radius: 0px;
+    font-weight: 500;
 }
 body {
 	margin:0;
@@ -56,7 +67,8 @@ body {
 	transform: translate(-50%,-50%);
 	pointer-events: none;
 }
-h3 {
+h2, h3 {
+	font-size: 1.17em;
 	font-family: 'Druk Wide';
 	font-weight: 600;
 	text-transform: uppercase;
@@ -394,7 +406,7 @@ li.track canvas {
 	color:inherit;
 	text-decoration: none;
 	border-bottom:2px solid rgba(255,255,255,1);
-    font-weight: 800;
+    font-weight: 500;
     /*letter-spacing: .1em;
     text-transform: uppercase;*/
 }
@@ -455,7 +467,7 @@ li.track canvas {
 	font-size:.8em;
 	letter-spacing: .2em;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 500;
 	padding-bottom:5px;
 }
 .footer a:hover {
@@ -488,8 +500,69 @@ li.track canvas {
 	display: inline-block;
 }
 .apparel-item .product-info p.price {
+	font-size:1em;
+	font-weight: 800;
+}
+.apparel-item .product-info p.desc {
 	font-size:.8em;
-	color:rgba(255,255,255,.3);
+	color:rgba(255,255,255,.3);	
+}
+.select {
+	box-sizing: border-box;
+	border:1px dotted #fff;
+	display: inline-block;
+	margin-top:10px;
+	margin-bottom:25px;
+}
+.select .option {
+	padding:15px;
+	cursor:pointer;
+	box-sizing:border-box;
+	text-align: center;
+	width:70px;
+	border-right:1px dotted #fff;
+	display: inline-block;
+	margin:0;
+	margin-left:-4px;
+	font-weight: 400;
+
+	transition:.2s ease-in-out;
+	-o-transition:.2s ease-in-out;
+	-ms-transition:.2s ease-in-out;
+	-moz-transition:.2s ease-in-out;
+	-webkit-transition:.2s ease-in-out;
+}
+.select .option:hover {
+	background:#fff;
+	color:#0e0d0c;
+}
+.select .option.last {
+	border-right:none;
+}
+.select .option.active {
+	background:#fff;
+	font-weight: 800;
+	color:#0e0d0c;
+}
+.apparel-feature {
+	background-size:cover;
+	background-position: center;
+	margin-top:50px;
+	padding:50px;
+	position: relative;
+}
+.apparel-feature h2 {
+	position: relative;
+	z-index: 2;
+}
+.apparel-feature .fade {
+	position:absolute;
+	top:0;
+	left:0;
+	background:rgba(0,0,0,.5);
+	width:100%;
+	height:100%;
+	z-index: 1;
 }
 
 
@@ -553,5 +626,11 @@ li.track canvas {
 		width:100%;
 		padding:0;
 		position: unset;
+	}
+	.select {
+		width:100%;
+	}
+	.select .option {
+		width:calc(20% + .8px);
 	}
 }

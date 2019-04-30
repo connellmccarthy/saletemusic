@@ -26,10 +26,10 @@ $(document).ready(function() {
 	$(document).mousemove(function(e) {
 	    $('.cursor').eq(0).css({ left: e.pageX, top: e.pageY });
 	});
-	$('a,.btn,.shopify-buy-frame').mouseenter(function() {
+	$('a,.select').mouseenter(function() {
 		cur_hover('enter');
 	});
-	$('a,.btn,.shopify-buy-frame').mouseleave(function() {
+	$('a,.select').mouseleave(function() {
 		cur_hover('exit');
 	});
 });
